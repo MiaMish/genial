@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pashoshai.genial</groupId>
+    <artifactId>pashoshai-genial-parent</artifactId>
+    <version>1.0.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>GenialGame Root Pom</name>
+
+    <modules>
+        <module>service</module>
+    </modules>
+
+    <properties>
+        <dependency.version.mfa-core-service>0.3.2</dependency.version.mfa-core-service>
+        <dependency.version.spring-orm>4.3.7.RELEASE</dependency.version.spring-orm>
+        <dependency.version.mysql-connector>8.0.11</dependency.version.mysql-connector>
+        <dependency.version.hibernate>5.4.2.Final</dependency.version.hibernate>
+        <dependency.version.commons-dbcp2>2.1.1</dependency.version.commons-dbcp2>
+        <dependency.version.h2-db>1.4.199</dependency.version.h2-db>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.3.2.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

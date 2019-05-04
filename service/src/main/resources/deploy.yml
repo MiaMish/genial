@@ -1,0 +1,29 @@
+# **NOTICE**
+# This file is for configuring your application when it is running in a
+# container, in an environment (Production)
+# This file is packaged in your Dockerfile so when you run locally via
+# docker-compose, it will also load in any environment variables such
+# as SPRING_APPLICATION_JSON. The SPRING_APPLICATION_JSON values will
+# override any settings in this file when you run locally via
+# docker-compose!
+# **END NOTICE**
+
+server:
+  port: 8080
+app:
+  name: genial
+
+spring:
+  output:
+    ansi:
+      enabled: never
+  datasource:
+    url: "jdbc:h2:mem:genial_db;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false"
+    driverClassName: "org.h2.Driver"
+    data: "classpath:import-h2.sql"
+
+logging:
+  level:
+    ROOT: INFO
+    com:
+      pingidentity: INFO
